@@ -1,0 +1,10 @@
+{
+  "database": {
+    "articles": "./db.sqlite"
+  },
+
+  "routes": {
+    "articles": "./routes/articles.js",
+    "article": "./routes/article.js"
+  }
+}

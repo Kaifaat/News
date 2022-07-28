@@ -1,0 +1,41 @@
+
+<div class="article-main">
+    <div class="article-main-center">
+        <div class="article-header">
+            <h1>{{articleInfo.title}}</h1>
+            <a class="article-main-remove">Удалить новость</a>
+        </div>
+
+        <hr>
+
+        <div class="article-text">
+            <div class="article__text__overview">
+                {{articleInfo.miniDescription}}
+            </div>
+            <div class="article__main-image">
+                <img alt="img" src="{{articleInfo.image}}">
+            </div>
+            <hr>
+            <p class="descrip">
+                {{articleInfo.description}}
+            </p>
+            <hr>
+            <br>
+            <div class="reactions">
+                <img class="like" src="https://i.ibb.co/7jqz91j/pngegg-2.png"><span class="like-count">{{countEmoji.countOfLikes}}</span>
+                <img class="dislike" src="https://i.ibb.co/Tt5m8Vk/pngegg.png"><span class="dislike-count">{{countEmoji.countOfDislikes}}</span>
+                <img class="smile" src="https://i.ibb.co/bz0kKbN/pngegg-1.png"><span class="smile-count">{{countEmoji.countOfSmiles}}</span>
+            </div>
+            <div class="send-comment">
+            <label for="psw"><b>Оставьте комментарий</b></label>
+            <textarea class="comment" placeholder="Напишите что-нибудь" rows="4" cols="100" name="comment" required></textarea>
+            <a class="send-comment">Отправить</a>
+            </div>
+            <div class="comments">
+            {{#each comments}}
+                {{> comment comment=this}}
+            {{/each}}
+            </div>
+        </div>
+    </div>
+</div>

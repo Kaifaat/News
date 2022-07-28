@@ -1,0 +1,44 @@
+<div class="about">
+    <div class="top-news-block">
+        <div class="main-new">
+            {{#each mainNew}}
+                {{> mainPageTopArticles article=this}}
+            {{/each}}
+        </div>
+        <div class="second-block">
+            {{#each rightNews}}
+                {{> mainPageTopArticles article=this}}
+            {{/each}}
+        </div>
+        {{#each downNews}}
+            {{> mainPageTopArticles article=this}}
+        {{/each}}
+    </div>
+
+    <hr>
+    <div class="middle-news-block">
+        {{#each categoryNoTechnologyArticles}}
+            {{> mainPageMidleArticles article=this}}
+        {{/each}}
+    </div>
+
+    <hr>
+
+    <div class="interview-block">
+        {{#each lastInterview}}
+            {{> mainPageLastInterview article=this}}
+        {{/each}}
+    </div>
+    <div class="weather" style="background: url(https://i.ibb.co/sHQtLvZ/1644931645-4-krot-info-p-fon-pogoda-4.jpg);">
+        <p class="weather__city"></p>
+        <p class="weather__forecast"></p>
+        <p class="weather__desc"></p>
+        <p class="weather__icon"></p>
+    </div>
+    <div class="currency">
+        <span>Курсы валют:</span>
+    <p class="USD"></p>
+    <p class="EUR"></p>
+    <p class="RUB"></p>
+</div>
+</div>
